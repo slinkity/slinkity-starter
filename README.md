@@ -31,13 +31,18 @@ npm i
 npm start
 ```
 
-## Author
+## Authors
 
 👤 **Ben Holmes**
 
 * Website: https://bholmes.dev
 * Twitter: [@bholmesdev](https://twitter.com/bholmesdev)
 * Github: [@Holben888](https://github.com/Holben888)
+
+👤 **Anthony Campolo**
+
+* Twitter: [@ajcwebdev](https://twitter.com/ajcwebdev)
+* Github: [@ajcwebdev](https://github.com/ajcwebdev)
 
 ## 🤝 Contributing
 
