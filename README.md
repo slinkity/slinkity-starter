@@ -1,3 +1,5 @@
+![Slinkity starter project banner](/assets/social-media-banner.jpg)
+
 <h1 align="center">Welcome to Slinkity starter project 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
