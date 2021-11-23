@@ -1,7 +1,5 @@
 ![Slinkity starter project banner](/assets/social-media-banner.jpg)
 
-The all-in-one template for building your first Slinkity project 
-
 <h1 align="center">Welcome to Slinkity starter project 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
@@ -19,7 +17,11 @@ The all-in-one template for building your first Slinkity project
   </a>
 </p>
 
-[Slinkity](https://slinkity.dev) is a framework that uses Vite to bring dynamic, client side interactions to your static 11ty sites. It was announced by [Ben Holmes](https://twitter.com/BHolmesDev) with a Tweet on [June 14, 2021](https://twitter.com/BHolmesDev/status/1404426841440538627) and released as an alpha version on [August 8, 2021](https://www.npmjs.com/package/slinkity). Slinkity enables turning existing `.html` or `.liquid` files into `.jsx` files. It allows you to insert components into pages with shortcodes such as, `{% react './path/to/Hello.jsx' %}`. Because component-driven pages are hydrated on the client, dynamic state management works in both development and production. It aims to unify two competing camps in the current web development community:
+<h3 align="center">The all-in-one template for building your first Slinkity project</h3>
+
+[Slinkity](https://slinkity.dev) is a framework that uses Vite to bring dynamic, client side interactions to your static 11ty sites. Slinkity enables turning existing `.html` or `.liquid` files into `.jsx` files. It allows you to insert components into pages with shortcodes such as, `{% react './path/to/Hello.jsx' %}`. Because component-driven pages are hydrated on the client, dynamic state management works in both development and production.
+
+It aims to unify two competing camps in the current web development community:
 * Lean, JavaScript-free static site generators driven by data and templating languages like Jekyll and Hugo.
 * Dynamic, JavaScript-heavy web apps powered by data and React or Vue components like NextJS and NuxtJS.
 
