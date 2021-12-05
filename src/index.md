@@ -8,8 +8,8 @@ With the `react` [shortcode](https://www.11ty.dev/docs/shortcodes/), you can ins
 
 ### Hello Component
 
-{% react 'components/Hello' %}
+{% react 'Hello' %}
 
 ### Counter Component
 
-{% react 'components/Counter' %}
+{% react 'Counter' %}
