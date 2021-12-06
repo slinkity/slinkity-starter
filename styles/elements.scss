@@ -1,5 +1,10 @@
 @use 'tools.scss';
 
+html {
+  font-family: 'Atkinson', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  line-height: 1.3;
+}
+
 body {
   @include tools.grid-background;
   color: white;
