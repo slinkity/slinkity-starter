@@ -1,0 +1,7 @@
+@mixin grid-background {
+  box-sizing: border-box;
+  background: var(--purple-1);
+  background-image: linear-gradient(var(--purple-3) 1px, transparent 0),
+    linear-gradient(90deg, var(--purple-3) 1px, transparent 0);
+  background-size: 2rem 2rem;
+}

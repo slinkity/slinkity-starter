@@ -1,0 +1,25 @@
+@use 'tools.scss';
+
+body {
+  @include tools.grid-background;
+  color: white;
+
+  &::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(transparent 25%, var(--purple-1) 50%);
+    background-size: 100% 200%;
+    animation: fade-in-grid 0.8s linear forwards;
+
+    @keyframes fade-in-grid {
+      from {
+        background-position-y: 100%;
+      }
+      to {
+        background-position-y: 0%;
+      }
+    }
+  }
+}
