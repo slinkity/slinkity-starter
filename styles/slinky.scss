@@ -1,0 +1,24 @@
+.logo__container {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  
+  .logo {
+    overflow: visible;
+  
+    > path {
+      transform: rotate(0);
+      transition: transform 0.3s ease-out;
+      transform-origin: 130% 65%;
+    }
+
+    &.slink-engaged > path {
+      @for $i from 2 through 5 {
+        &:nth-child(#{$i}) {
+          transform: rotate(($i - 1) * 30deg);
+          transition-timing-function: cubic-bezier(.37,.08,.48,1.95);
+        }
+      }
+    }
+  }
+}
