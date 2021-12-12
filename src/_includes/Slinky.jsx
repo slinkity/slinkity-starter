@@ -12,8 +12,8 @@ export default function SpinningLogo() {
   }
 
   return (
-    <section className="logo__container">
-      <svg className={`logo ${slinkDirection}`} width="250" height="150" viewBox="0 0 250 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <section className="slinky__container">
+      <svg className={`slinky ${slinkDirection}`} width="250" height="150" viewBox="0 0 250 150" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M91.6134 110.636C90.8616 113.546 90.4874 116.547 90.5107 119.563L10.1157 119.517C10.0368 109.319 11.3027 99.2597 13.8018 89.5876L91.6134 110.636Z" fill="white"/>
         <path d="M91.6134 110.636C90.8616 113.546 90.4874 116.547 90.5107 119.563L10.1157 119.517C10.0368 109.319 11.3027 99.2597 13.8018 89.5876L91.6134 110.636Z" fill="white"/>
         <path d="M91.6134 110.636C90.8616 113.546 90.4874 116.547 90.5107 119.563L10.1157 119.517C10.0368 109.319 11.3027 99.2597 13.8018 89.5876L91.6134 110.636Z" fill="white"/>
@@ -28,7 +28,7 @@ export default function SpinningLogo() {
           </linearGradient>
         </defs>
       </svg>
-      <button onClick={toggleSlinkDirection}>{slinkDirection === 'left' ? 'Slinky to the right' : 'Slinky to the left'}</button>
+      <button className="slinky__button" onClick={toggleSlinkDirection}>{slinkDirection === 'left' ? 'Slinky to the right' : 'Slinky to the left'}</button>
     </section>
   )
 }

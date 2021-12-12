@@ -1,44 +1,50 @@
-.logo__container {
+.slinky__container {
   display: grid;
-  justify-items: center;
   justify-content: center;
-  
-  .logo {
-    path {
-      animation-duration: 0.6s;
-      animation-fill-mode: forwards;
-      transform-origin: 50% 80%;
-    }
-  
-    @for $i from 1 through 7 {
-      &.right > path:nth-child(#{$i}) {
-        animation-name: slinky-right-#{$i};
-        @keyframes slinky-right-#{$i} {
-          0% {
-            transform: rotate(0);
-          }
-          50% {
-            transform: rotate(($i - 1) * 27.5deg);
-          }
-          100% {
-            transform: rotate(165deg);
-          }
+}
+
+.slinky {
+  background: var(--purple-2);
+
+  path {
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    transform-origin: 50% 80%;
+  }
+
+  @for $i from 1 through 7 {
+    &.right > path:nth-child(#{$i}) {
+      animation-name: slinky-right-#{$i};
+      @keyframes slinky-right-#{$i} {
+        0% {
+          transform: rotate(0);
+        }
+        50% {
+          transform: rotate(($i - 1) * 27.5deg);
+        }
+        100% {
+          transform: rotate(165deg);
         }
       }
-      &.left > path:nth-child(#{$i}) {
-        animation-name: slinky-left-#{$i};
-        @keyframes slinky-left-#{$i} {
-          0% {
-            transform: rotate(165deg);
-          }
-          50% {
-            transform: rotate((7 - $i) * 27.5deg);
-          }
-          100% {
-            transform: rotate(0);
-          }
+    }
+    &.left > path:nth-child(#{$i}) {
+      animation-name: slinky-left-#{$i};
+      @keyframes slinky-left-#{$i} {
+        0% {
+          transform: rotate(165deg);
+        }
+        50% {
+          transform: rotate((7 - $i) * 27.5deg);
+        }
+        100% {
+          transform: rotate(0);
         }
       }
     }
   }
+}
+
+.slinky__button {
+  padding: 0.5rem 1rem;
+  border-top: 2px solid var(--purple-3);
 }
