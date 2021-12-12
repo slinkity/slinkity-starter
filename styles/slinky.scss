@@ -2,21 +2,44 @@
   display: grid;
   justify-items: center;
   justify-content: center;
+  margin-top: 100px;
   
   .logo {
     overflow: visible;
-  
-    > path {
-      transform: rotate(0);
-      transition: transform 0.3s ease-out;
+
+    path {
+      animation-duration: 0.6s;
+      animation-fill-mode: forwards;
       transform-origin: 130% 65%;
     }
-
-    &.slink-engaged > path {
-      @for $i from 2 through 5 {
-        &:nth-child(#{$i}) {
-          transform: rotate(($i - 1) * 30deg);
-          transition-timing-function: cubic-bezier(.37,.08,.48,1.95);
+  
+    @for $i from 1 through 7 {
+      &.right > path:nth-child(#{$i}) {
+        animation-name: slinky-right-#{$i};
+        @keyframes slinky-right-#{$i} {
+          0% {
+            transform: rotate(0);
+          }
+          50% {
+            transform: rotate(($i - 1) * 27.5deg);
+          }
+          100% {
+            transform: rotate(165deg);
+          }
+        }
+      }
+      &.left > path:nth-child(#{$i}) {
+        animation-name: slinky-left-#{$i};
+        @keyframes slinky-left-#{$i} {
+          0% {
+            transform: rotate(165deg);
+          }
+          50% {
+            transform: rotate((7 - $i) * 27.5deg);
+          }
+          100% {
+            transform: rotate(0);
+          }
         }
       }
     }
