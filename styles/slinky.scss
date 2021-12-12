@@ -2,15 +2,12 @@
   display: grid;
   justify-items: center;
   justify-content: center;
-  margin-top: 100px;
   
   .logo {
-    overflow: visible;
-
     path {
       animation-duration: 0.6s;
       animation-fill-mode: forwards;
-      transform-origin: 130% 65%;
+      transform-origin: 50% 80%;
     }
   
     @for $i from 1 through 7 {
