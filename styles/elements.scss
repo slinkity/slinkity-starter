@@ -28,3 +28,35 @@ body {
     }
   }
 }
+
+a, a:visited, button {
+  transition-property: background-position-x, color, opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  background: linear-gradient(
+      80deg,
+      var(--purple-1) 33%,
+      var(--primary),
+      var(--secondary)
+  );
+  background-size: 300% 100%;
+  background-position-x: 0;
+
+  &:hover {
+      background-position-x: 100%;
+      color: var(--purple-1);
+      text-decoration: none;
+  }
+}
+
+a, a:visited {
+  color: var(--primary);
+  padding: 2px;
+}
+
+button {
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}

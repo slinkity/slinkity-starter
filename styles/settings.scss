@@ -38,4 +38,9 @@
   --purple-1: hsl(258, 47%, 2%);
   --purple-2: hsl(258, 47%, 12%);
   --purple-3: hsl(258, 47%, 22%);
+  
+  --pink: #ff00d6;
+  --yellow: #faff02;
+  --primary: var(--pink); 
+  --secondary: var(--yellow);
 }
