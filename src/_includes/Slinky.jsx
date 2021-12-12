@@ -1,10 +1,10 @@
 import React from 'react'
 
 export default function SpinningLogo() {
-  const [slinkDirection, setSlinkDirection] = React.useState('initial')
+  const [slinkDirection, setSlinkDirection] = React.useState('left')
 
   function toggleSlinkDirection() {
-    if (slinkDirection === 'initial' || slinkDirection === 'left') {
+    if (slinkDirection === 'left') {
       setSlinkDirection('right')
     } else {
       setSlinkDirection('left')
@@ -28,7 +28,7 @@ export default function SpinningLogo() {
           </linearGradient>
         </defs>
       </svg>
-      <button onClick={toggleSlinkDirection}>{slinkDirection === 'left' || slinkDirection === 'initial' ? 'Slinky to the right' : 'Slinky to the left'}</button>
+      <button onClick={toggleSlinkDirection}>{slinkDirection === 'left' ? 'Slinky to the right' : 'Slinky to the left'}</button>
     </section>
   )
 }
