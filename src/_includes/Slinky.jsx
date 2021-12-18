@@ -23,8 +23,8 @@ export default function SpinningLogo() {
         <path d="M91.6134 110.636C90.8616 113.546 90.4874 116.547 90.5107 119.562L10.1157 119.517C10.0368 109.319 11.3027 99.2596 13.8018 89.5875L91.6134 110.636Z" fill="url(#slinky-gradient-segment)"/>
         <defs>
           <linearGradient id="slinky-gradient-segment" x1="11.3604" y1="104.74" x2="90.1892" y2="114.114" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#FF01D7"/>
-            <stop offset="1" stop-color="#FBFF03"/>
+            <stop stopColor="#FF01D7"/>
+            <stop offset="1" stopColor="#FBFF03"/>
           </linearGradient>
         </defs>
       </svg>
