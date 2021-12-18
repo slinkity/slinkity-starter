@@ -17,7 +17,7 @@ function ReactDemo() {
       <h3>Hydrating this page</h3>
 
       <p>
-        We hydrate component pages by default (which we <em>will</em> change soon by the way!). To adjust this, you can add a <code>render</code> property to your front matter to decide <em>if and when</em> to ship JavaScript.
+        We hydrate component pages by default. To adjust this, you can add a <code>render</code> property to your front matter to decide <em>if and when</em> to ship JavaScript. Learn more on <a href="https://slinkity.dev/docs/partial-hydration/">our partial hydration docs.</a>
       </p>
 
       <p>
