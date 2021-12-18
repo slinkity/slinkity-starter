@@ -15,7 +15,7 @@ With [component shortcodes](https://www.11ty.dev/docs/shortcodes/), you can inse
 
 Did you see that grid background fade into view? Yeah, we think it's pretty cool too. We pulled it off using a few lines of CSS under the `/styles` directory.
 
-You should head over there and start breaking things! You'll see near-instant feedback to your changes thanks to Vite's hot module reloading setup.
+We invite you to head over there and start breaking things! You'll see near-instant feedback to your changes thanks to Vite's hot module reloading setup.
 
 <details>
   <summary>H-M-What now?</summary>
