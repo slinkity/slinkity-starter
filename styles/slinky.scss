@@ -1,10 +1,18 @@
 .slinky__container {
   display: grid;
+  position: relative;
   justify-content: center;
+  margin-bottom: 3rem;
+  background: var(--purple-2);
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
 .slinky {
   background: var(--purple-2);
+  width: 400px;
+  max-width: 90vw;
+  height: auto;
 
   path {
     animation-duration: 0.6s;
@@ -45,6 +53,7 @@
 }
 
 .slinky__button {
+  --starting-color: var(--purple-3);
   padding: 0.5rem 1rem;
-  border-top: 2px solid var(--purple-3);
+  border-radius: 0.3rem;
 }

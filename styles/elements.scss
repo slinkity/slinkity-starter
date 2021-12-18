@@ -8,6 +8,7 @@ html {
 body {
   @include tools.grid-background;
   color: white;
+  margin: 2rem;
 
   &::before {
     content: '';
@@ -29,13 +30,18 @@ body {
   }
 }
 
+main {
+  max-width: var(--content-max-width);
+  margin: auto;
+}
+
 a, a:visited, button {
   transition-property: background-position-x, color, opacity;
   transition-duration: 0.2s;
   transition-timing-function: linear;
   background: linear-gradient(
       80deg,
-      var(--purple-1) 33%,
+      var(--starting-color, var(--purple-1)) 33%,
       var(--primary),
       var(--secondary)
   );
@@ -60,4 +66,13 @@ button {
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;
+}
+
+details {
+  border: 1px solid var(--purple-3);
+  padding: 0.5rem 1rem;
+  background: var(--purple-2);
+  margin-bottom: 0.5rem;
+  box-shadow: 0 6px 20px 10px var(--purple-1);
+  border-radius: 0.5rem;
 }
