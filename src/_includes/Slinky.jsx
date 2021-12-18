@@ -28,7 +28,7 @@ export default function SpinningLogo() {
           </linearGradient>
         </defs>
       </svg>
-      <button className="slinky__button" onClick={toggleSlinkDirection}>{slinkDirection === 'left' ? 'Slinky to the right' : 'Slinky to the left'}</button>
+      <button className="slinky__button" onClick={toggleSlinkDirection}>{slinkDirection === 'left' ? 'Move slinky right 👉' : 'Move slinky left 👈'}</button>
     </section>
   )
 }
