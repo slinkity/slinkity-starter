@@ -34,13 +34,13 @@ We invite you to head over there and start breaking things! You'll see near-inst
 <details>
   <summary>How are those stylesheets applied?</summary>
   <p>
-    We roll all our SCSS files into that single <code>styles/_base.css</code> file <a href="https://sass-lang.com/documentation/at-rules/use">using SCSS imports</a>. Then, we load that single stylesheet onto our page from a layout file (<code>src/_includes/layout.njk</code>) using a regular <code>link</code> tag like so: <code>{`<link rel="stylesheet" href="@root/styles/_base.scss">`}</code>
+    Each stylesheet is loaded onto the page from a layout file (<code>src/_includes/layout.njk</code>) using a regular <code>link</code> tag like so: <code>link rel="stylesheet" href="/@root/styles/index.scss"</code>
   </p>
   <p>
     Theres 2 important takeaways here:
   </p>
   <ol>
     <li>We use the <code>@root</code> import alias to import from the root of our project. Check out <a href="https://slinkity.dev/docs/import-aliases/">our docs on import aliases</a> for more details.</li>
-    <li>We leave that <code>.scss</code> extension as-is. Vite scans through our html files for exotic file extensions like this. If it knows how to process an extension, it'll transform that file on-the-fly into something the browser understand. And if you're looking around for some SCSS plugin we're applying, no need! SCSS support comes out-the-box with Vite. You can also configure your CSS setup of choice by following <a href="https://vitejs.dev/guide/features.html#css">Vite's styling docs.</a></li>
+    <li>We leave that <code>.scss</code> extension as-is. Vite scans through our html files for exotic file extensions like this. If it knows how to process an extension, it'll transform that file on-the-fly into something the browser can understand. And if you're looking around for some SCSS plugin we're applying, no need! SCSS support comes out-the-box with Vite. You can also configure your CSS setup of choice by following <a href="https://vitejs.dev/guide/features.html#css">Vite's styling docs.</a></li>
   </ol>
 </details>
