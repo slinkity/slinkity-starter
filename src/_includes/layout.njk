@@ -29,7 +29,8 @@
       as="font"
       type="font/woff2"
       crossorigin="anonymous">
-    <link rel="stylesheet" href="@root/styles/_base.scss">
+    <link rel="stylesheet" href="@root/styles/index.scss">
+    <link rel="stylesheet" href="@root/styles/slinky.scss">
     <title>{{ title }}</title>
   </head>
   <body>
@@ -39,7 +40,9 @@
         <summary>☝️ Who generated that heading?</summary>
         <p>
           That heading came from a wrapper layout. If you check out this page's source (<code>{{ page.fileSlug }}</code>), you'll notice some frontmatter applied between those
-          <code>---</code>
+          <code>
+            {% raw %}---{% endraw %}
+          </code>
           blocks:
         </p>
         <dl>
