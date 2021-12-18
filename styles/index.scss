@@ -129,3 +129,16 @@ details {
   box-shadow: 0 6px 20px 10px var(--purple-1);
   border-radius: 0.5rem;
 }
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  button {
+    border: 1px solid var(--pink);
+    border-radius: 0.5rem;
+    padding: 0.2rem 0.6rem;
+    font-weight: 700;
+  }
+}
