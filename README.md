@@ -12,24 +12,20 @@
   <a href="https://github.com/slinkity/slinkity-starter/blob/master/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
-  <a href="https://twitter.com/bholmesdev" target="_blank">
-    <img alt="Twitter: bholmesdev" src="https://img.shields.io/twitter/follow/bholmesdev.svg?style=social" />
+  <a href="https://twitter.com/slinkitydotdev" target="_blank">
+    <img alt="Twitter: slinkitydotdev" src="https://img.shields.io/twitter/follow/slinkitydotdev.svg?style=social" />
   </a>
 </p>
 
 <h3 align="center">The all-in-one template for building your first Slinkity project</h3>
 
-[Slinkity](https://slinkity.dev) is a framework that uses Vite to bring dynamic, client side interactions to your static 11ty sites. Slinkity enables turning existing `.html` or `.liquid` files into `.jsx` files. It allows you to insert components into pages with shortcodes such as, `{% react './path/to/Hello.jsx' %}`. Because component-driven pages are hydrated on the client, dynamic state management works in both development and production.
+[Slinkity](https://slinkity.dev) is a framework that uses Vite to bring dynamic, client side interactions to your static 11ty sites. Slinkity lets you swap out existing templates like `.html` or `.liquid` for component templates like `.jsx`. What's more, it allows you to insert components into pages using shortcodes, like this one: `{% react './path/to/Component.jsx' %}`. And since you can opt-in to hydrating components clientside, dynamic state variables can work in both development and production.
 
-It aims to unify two competing camps in the current web development community:
-* Lean, JavaScript-free static site generators driven by data and templating languages like Jekyll and Hugo.
-* Dynamic, JavaScript-heavy web apps powered by data and React or Vue components like NextJS and NuxtJS.
+With these capabilities, we aim to unify two competing camps in the web development community:
+* **Lean, JavaScript-free static site generators** driven by data and templating languages like Jekyll and Hugo.
+* **Dynamic, JavaScript-heavy web apps** powered by data and component frameworks like NextJS and NuxtJS.
 
-## ⛔️ WARNING - ALPHA SOFTWARE ⛔️
-
-Slinkity is in early alpha and not recommended for production use unless you like living on the edge and filing issues. You can report issues or log bugs [here](https://github.com/Holben888/slinkity/issues).
-
-### Install dependencies and start development server
+## Install dependencies and start development server
 
 `yarn start` runs `slinkity --serve` to start [a Vite server](https://vitejs.dev/guide/#index-html-and-project-root) pointed at your 11ty build. The `--incremental` flag can be used for faster builds during development.
 
@@ -38,35 +34,41 @@ yarn
 yarn start
 ```
 
-Open [localhost:8080](http://localhost:8080/) to view your site. Vite enables processing a range of file types including SASS and React.
+Open [localhost:8080](http://localhost:8080/) to view your site. Vite's development server enables processing a range of resources including SASS and React.
 
-### Available Scripts
+## Build for production
 
-Commands include `yarn start` for `slinkity --serve` and `yarn build` for `slinkity`. Running `slinkity` creates a production build. Your new site will appear in the `_site` folder or [wherever you tell 11ty to build your site](https://www.11ty.dev/docs/config/#output-directory). For production builds, Eleventy first builds all your routes to a temporary directory and then Vite picks up all the resource bundling, minification, and final optimizations to build your intended output from this temporary directory.
+Run the `slinkity` to process your files in a 2 step process:
+- Use 11ty to build your routes and copy over static assets
+- Use Vite to bundle, minify, and optimize your styles and JS resources
 
-When using the `slinkity` command, all arguments are passed directly to the `eleventy` CLI except `serve` and `port`:
-* `serve` starts the [11ty dev server in `--watch` mode](https://www.11ty.dev/docs/usage/#re-run-eleventy-when-you-save) to listen for file changes.
-* Slinkity spins up an independent Vite server instead of 11ty's Browsersync server. `port` is for our own server which needs to be picked up and passed to Vite.
+```bash
+yarn build
+```
 
-The CLI checks for Eleventy configs and will look for any custom directories returned such as input or output. If found, those are passed off to the Vite server so it can look in the right place.
+Your new site will appear in the `_site` folder, or [wherever you tell 11ty to build your site](https://www.11ty.dev/docs/config/#output-directory).
+
+## `.eleventy.js`
+
+Slinkity relies on 11ty's [latest 1.0 beta build](https://www.npmjs.com/package/@11ty/eleventy/v/beta) to work properly. Our `.eleventy.js` file includes a few niceties we'd recommend for any Slinkity project, including:
+
+- Setting an input directory
+- Copying static assets to the build from a `/public` directory
+- Using Nunjucks for shortcode processing in markdown
+
+To see the full "what" and "why," head to the [.eleventy.js](.eleventy.js) file.
+
+## How does the `slinkity` command differ from `eleventy`?
+
+You can view `slinkity` as the "glue" between 11ty and Vite. When using the `slinkity` command, all arguments are passed directly to the `eleventy` CLI, except `serve` and `port`:
+- `serve` starts the [11ty dev server in `--watch` mode](https://www.11ty.dev/docs/usage/#re-run-eleventy-when-you-save) to listen for file changes.
+- `port` is passed to Slinkity's independent Vite server instead of 11ty's Browsersync server.
+
+The CLI checks for Eleventy configs and will look for any custom directories returned, such as input or output. If found, those are passed off to the Vite server so it can look in the right place.
+
+Here's a the full step-by-step for those curious!
 
 ![01-slinkity-architecture](https://raw.githubusercontent.com/slinkity/slinkity/main/assets/architecture-diagram.jpg)
-
-### `.eleventy.js`
-
-Slinkity relies on 11ty's [latest 1.0 beta build](https://www.npmjs.com/package/@11ty/eleventy/v/beta) to work properly. Our `.eleventy.js` file includes setting the input directory to `src`.
-
-```js
-// .eleventy.js
-
-module.exports = function (eleventyConfig) {
-  return {
-    dir: {
-      input: 'src',
-    },
-  }
-}
-```
 
 ## Authors
 
