@@ -51,12 +51,6 @@
   "homepage": "https://github.com/slinkity/slinkity-starter#readme",
   "dependencies": {
     "kolorist": "^1.5.1",
-    "prompts": "^2.4.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
-  "devDependencies": {
-    "@11ty/eleventy": "^1.0.0-beta.8",
-    "slinkity": "^0.4.1"
+    "prompts": "^2.4.2"
   }
 }
