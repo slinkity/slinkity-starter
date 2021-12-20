@@ -1,4 +1,4 @@
-![Slinkity starter project banner](/assets/social-media-banner.jpg)
+![Slinkity starter project banner](./public/images/og-image-banner.jpg)
 
 <h1 align="center">Welcome to Slinkity starter project 👋</h1>
 <p>
