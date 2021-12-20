@@ -21,8 +21,6 @@ const PKG = 'package.json'
   // they must have ctrl + C'd out of the program
   if (!dest) process.exit(0)
 
-  console.log('Copying files...')
-
   const srcRoot = path.join(__dirname, 'templates/react')
   const destRoot = path.join(process.cwd(), dest)
   fs.mkdirSync(destRoot)
