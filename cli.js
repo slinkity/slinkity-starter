@@ -41,8 +41,11 @@ const PKG = 'package.json'
 
   console.log(`Welcome to your first ${yellow('Slinkity site!')}`)
   console.log('Step 1: run these commands to install and serve locally 👇')
-  console.log(`yarn
-yarn start`)
+  console.log(`
+cd ${dest}
+yarn
+yarn start
+`)
   console.log(`Step 2: ${red('have fun ❤️')}`)
 })()
 
